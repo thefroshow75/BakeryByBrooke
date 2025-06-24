@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>BakeryByBrooke</title>
+      <link rel="stylesheet" href="style.css" />
+</head>
+
+
+
+<body data-theme="Brooke">
+
+      <header class="navbar">
+            <div class="navbar-container">
+            <img src="images/BakeryByBrooke_Logo.jpg" alt="Bakery By Brooke Logo" class="logo">
+
+            <a class="logo" href="#home">BakeryByBrooke</a>
+
+
+            <nav class="nav-menu" id="nav-menu">
+                  <a href="#home">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#products">Products</a>
+                  <a href="#contact">Contact</a>
+                  <div class="cart-display">🛒 <span id="cart-count">0</span>
+                  </div>
+            </nav>
+            </div>
+
+            <!-- Sliding Cart Panel -->
+            <div id="cart-sidebar" class="cart-sidebar">
+                  <div class="cart-sidebar-header">
+                        <h3>🛒 Cart</h3>
+                        <button onclick="closeCartSidebar()" class="close-cart">✕</button>
+                  </div>
+
+                  <div id="cart-items" class="cart-items-section"></div>
+                  <div id="cart-total" class="cart-total-summary"></div>
+
+                  <div id="checkout-form-section">
+                        <h4>Checkout</h4>
+                        <form action="https://formspree.io/f/myzjwkpe" method="POST" class="checkout-form">
+                              <input type="text" name="name" placeholder="Your name" required />
+                              <input type="email" name="email" placeholder="Your email" required />
+                              <input type="date" name="eventDate" required />
+                              <textarea name="order" id="order-summary" rows="4" readonly></textarea>
+                              <div class="checkout-actions">
+                                    <button type="submit">Submit Order</button>
+                                    <button type="button" onclick="closeCartSidebar()">Cancel</button>
+                              </div>
+                        </form>
+                  </div>
+            </div>
+
+      </header>
+      <main>
+            <section id="home" class="hero">
+                  <div class="hero-content">
+                        <h1>BakeryByBrooke</h1>
+                        <p>Made with lots of sugar, and a dash of Love. <br>
+                        But mostly the sugar</p>
+                        
+                  
+                        <a href="#products" class="cta-button">Take a peek at our pasteries!</a>
+                  </div>
+
+
+
+
+            </section>
+
+            <section id="about" class="section">
+                  <h2>About Us</h2>
+                  <p>
+                        Bakery By Brooke is a neighborhood bakery built on love, flour, and a pinch of sugar magic.
+                        We specialize in handcrafted pastries, custom cakes, and feel-good favorites made fresh every day. 
+                        Our cozy kitchen is where tradition meets creativity—bringing a little sweetness to every celebration, big or small.
+                  </p>
+
+                  <div class="about-cards">
+                        <div class="about-card">
+                              <h3>🍽️ Catering Services</h3>
+                              <p>Planning a party, meeting, or special event? We offer custom catering packages with a selection of baked goods!</p>
+                        </div>
+                        <div class="about-card">
+                              <h3>🎂 Custom Cakes</h3>
+                              <p>From birthdays to weddings, we work closely with you to design cakes that taste as good as they look.</p>
+                        </div>
+                        <div class="about-card">
+                              <h3>💛 Community First</h3>
+                              <p>We’re proud to be a part of this community and love serving smiles along with our sweets.</p>
+                        </div>
+                  </div>
+
+            </section>
+
+            <section id="products" class="section">
+                  <h2>Our Specialties</h2>
+                  <div class="products-list">
+                        <div class="product-card">
+                              <div class="like-button-container">
+                                    <button class="like-button" aria-label="Like">
+                                          <span class="like-icon">❤️</span>  
+                                    </button>
+                                    <span class="like-count">0</span>
+                              </div>
+                              <img src="images/Cake01.png" alt="Cake01"> 
+                              
+                              <a href="LinkToProductPage.html" class="product-link">Cake01</a>
+
+                              <p>This is a Description</p>
+                              <h2>$200</h2>
+                              <button class="add-to-cart-button"
+                                    data-name="Cake01"
+                                    data-price="200"
+                                    data-image="images/Cake01.png">Add to Cart
+                              </button>
+
+                        </div>
+
+                        <div class="product-card">
+                              <div class="like-button-container">
+                                    <button class="like-button" aria-label="Like">
+                                          <span class="like-icon">❤️</span>  
+                                    </button>
+                                    
+                                    <span class="like-count">0</span>
+                              </div>
+                              <img src="images/Cake02.png" alt="Cake02"> 
+                              
+                              <a href="LinkToProductPage.html" class="product-link">Cake02</a>
+
+                              <p>This is a Description</p>
+                              <h2>$300</h2>
+                              <button class="add-to-cart-button"
+                                    data-name="Cake02"
+                                    data-price="300"
+                                    data-image="images/Cake02.png">Add to Cart
+                              </button>
+                        </div>
+                        
+                        <div class="product-card">
+                              <div class="like-button-container">
+                                    <button class="like-button" aria-label="Like">
+                                          <span class="like-icon">❤️</span>  
+                                    </button>
+                                    
+                                    <span class="like-count">0</span>
+                              </div>
+                              <img src="images/Cake03.png" alt="Cake03"> 
+                              
+                              <a href="LinkToProductPage.html" class="product-link">Cake03</a>
+
+                              <p>This is a Description</p>
+                              <h2>$500</h2>
+                              <button class="add-to-cart-button"
+                                    data-name="Cake03"
+                                    data-price="500"
+                                    data-image="images/Cake03.png">Add to Cart
+                              </button>
+                        </div>
+                  </div>
+            </section>
+
+            <section id="contact" class="section">
+                  <h2>Contact Me</h2>
+                  <form class="contact-form" action="https://formspree.io/f/myzjwkpe" method="POST">
+                        <div class="flex">
+                              <input type="text" name="name" placeholder="Your Name" required />
+                              <input type="email" name="email" placeholder="Email Address" required />
+                        </div>
+                              <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                              <button type="submit">Send Message</button>
+                  </form>
+            
+                  
+            </section>
+            
+      </main>
+
+
+      <footer>
+
+            <img src="images/BakeryByBrooke_Logo.jpg" alt="Bakery By Brooke Logo" class="logo">
+
+            <p> © 2025 Bakery By Brooke</p>
+            <p>Follow us on:
+                  <a href="https://www.facebook.com" target="_blank">Facebook</a>,
+                  <a href="https://www.twitter.com" target="_blank">Twitter</a>,
+                  <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            </p>
+            
+      </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
